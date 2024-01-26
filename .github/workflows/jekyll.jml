@@ -1,0 +1,25 @@
+name: Build and Deploy Jekyll
+
+on:
+  push:
+    branches:
+      - main  # 'main' 브랜치에 푸시될 때마다 실행. 브랜치 이름이 다르다면 해당 이름으로 변경하세요.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'  # 필요에 따라 Ruby 버전을 조정하세요.
+
+    - name: Build and Deploy
+      uses: jekyll/actions-pages@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # GitHub에서 자동으로 생성된 토큰을 사용합니다.
+
