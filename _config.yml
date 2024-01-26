@@ -23,7 +23,7 @@ email: castedice1@google.com
 description: >- # this means to ignore newlines until "baseurl:"
   일신 일일신 우일신. 어제보다 발전된 내가 되는 것을 목표로 합니다.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.dfle.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  castedice
 
 # Build settings
